@@ -1,0 +1,48 @@
+.dcsic_wrapper label { width: auto; display: inline; margin: 0; padding: 0; float: none; line-height: normal; }
+.dcsic_file_input { display: none; }
+
+.dcsic_choose_img, .dcsic_choose_other_img, .dcsic_delete_image, .dcsic_buttons > div > div {
+  display: inline-block; text-decoration: none; cursor: pointer; margin: 0;
+  color:white; background-color: #999999; border-radius: 4px; }
+.dcsic_choose_img, .dcsic_choose_other_img, .dcsic_delete_image { padding: 6px 8px; }
+.dcsic_choose_other_img, .dcsic_delete_image { margin-left: 20px; }
+.dcsic_buttons > div > div { padding: 10px 15px; }
+.dcsic_choose_img:hover, .dcsic_choose_other_img:hover, .dcsic_delete_image:hover, .dcsic_buttons > div > div:hover {
+  background-color: black; }
+.dcsic_current_img { vertical-align: middle; }
+
+.dcsic_wrapper .dcsic_choose_other_img, .dcsic_wrapper .dcsic_delete_image { display: none; }
+.dcsic_wrapper .dcsic_current_img { display: none; }
+.dcsic_wrapper .dcsic_choose_img { display: inline; }
+
+.dcsic_wrapper.has_image .dcsic_choose_other_img, .dcsic_wrapper.has_image .dcsic_delete_image { display: inline; }
+.dcsic_wrapper.has_image .dcsic_current_img { display: inline; }
+.dcsic_wrapper.has_image .dcsic_choose_img { display: none; }
+
+.dcsic_overlay { display: none; background-color: rgba(0,0,0,.7); align-items: center; justify-content: center;
+  position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 10000; }
+
+.dcsic_dialog {
+  position: fixed; background-color: white;
+  display: flex; flex-direction: column;
+}
+
+.dcsic_croppie_container { flex: 1; display: flex; align-items: center; justify-content: center; position: relative; }
+.dcsic_ws { position: absolute; top: 0; right: 0; bottom: 0; left: 0; }
+.dcsic_buttons { flex: 0 0 auto; display: flex; justify-content: space-between; }
+.dcsic_buttons > div { flex: 1 1 0; }
+.dcsic_buttons .cr-slider-wrap { text-align: center; padding-top: 8px; }
+.dcsic_buttons > div:first-child > div { margin-right: 20px; }
+.dcsic_buttons > div:last-child { text-align: right; }
+.dcsic_buttons > div:last-child > div { margin-left: 20px; }
+.dcsic_icon { display: inline-block; margin-left: 4px; margin-right: 12px; transform: scale(2); }
+
+@media only screen and (max-width: 767.98px) {
+  .dcsic_dialog { top: 0; right: 0; bottom: 0; left: 0; padding: 10px; }
+  .dcsic_buttons > div > div { margin-top: 10px; }
+}
+
+@media only screen and (min-width: 768px) {
+  .dcsic_dialog { top: 20px; right: 20px; bottom: 20px; left: 20px; padding: 20px; }
+  .dcsic_buttons { margin-top: 20px; }
+}
