@@ -12,8 +12,8 @@ class ClientsideCroppingWidget(Widget):
     def __init__(self,
                  width: int,
                  height: int,
-                 preview_width: int,
-                 preview_height: int,
+                 preview_width: typing.Optional[int],
+                 preview_height: typing.Optional[int],
                  clearable: typing.Optional[bool] = None,
                  format: str = "jpeg",
                  quality: int = 85,
@@ -39,8 +39,8 @@ class ClientsideCroppingWidget(Widget):
             'res_height': height,
             'res_format': format,
             'res_quality': quality,
-            'preview_width': preview_width,
-            'preview_height': preview_height,
+            'preview_width': preview_width or width,
+            'preview_height': preview_height or height,
         }
         self.clearable = clearable
         self.file_name = file_name

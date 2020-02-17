@@ -1,6 +1,6 @@
 if ($ === undefined) $ = django.jQuery;
 
-$(document).ready(function() {
+$(document).ready(function($) {
     function close_dialog(e) {
         $(".dcsic_croppie_container").html("");
         $(".dcsic_overlay").hide();
