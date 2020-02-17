@@ -15,6 +15,8 @@ jobs:
         python-version: '3.x'
     - name: Install dependencies
       run: |
+        apt update
+        apt install -y wget
         python -m pip install --upgrade pip
         python -m pip install setuptools twine
     - name: Build and publish
@@ -22,5 +24,7 @@ jobs:
         TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
         TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
       run: |
+        wget -P client_side_image_cropping/static/client_side_image_cropping https://raw.githubusercontent.com/Foliotek/Croppie/v2.6.4/croppie.css
+        wget -P client_side_image_cropping/static/client_side_image_cropping https://raw.githubusercontent.com/Foliotek/Croppie/v2.6.4/croppie.min.js
         python setup.py sdist
         twine upload dist/*
