@@ -1,5 +1,6 @@
 import base64, io, random, string, typing
 
+from django.db.models.fields.files import FieldFile
 from django.forms import Widget
 from django.core.files.uploadedfile import InMemoryUploadedFile
 
@@ -50,7 +51,20 @@ class ClientsideCroppingWidget(Widget):
         context = super().get_context(name, value, attrs)
         context['widget'].update(self.widget_context)
         context['input_clearable'] = bool('required' not in attrs) if self.clearable is None else self.clearable
-        context['current_img_url'] = value.url if value else ""
+
+        if value is None:
+            context['current_img_url'] = ""
+        elif value == False: # Form has been submitted but was not valid. User clicked "Remove" button to remove the file.
+            context['current_img_url'] = ""
+            context['original_uploaded_data'] = "clear"
+        elif hasattr(value, 'original_uploaded_data'): # Form has been submitted but was not valid. User already selected an image.
+            context['current_img_url'] = value.original_uploaded_data
+            context['original_uploaded_data'] = value.original_uploaded_data
+        elif isinstance(value, FieldFile): # Object is being edited and has already an image for this field.
+            context['current_img_url'] = value.url if value else ""
+        else:
+            raise ValueError(f"Unexpected value for field '{name}'.")
+
         return context
 
 
@@ -70,7 +84,7 @@ class ClientsideCroppingWidget(Widget):
         file = io.BytesIO()
         file_size = file.write(base64.b64decode(data[name].split(";base64,")[1]))
         file.seek(0)
-        return InMemoryUploadedFile(
+        inmem_file = InMemoryUploadedFile(
             file=file,
             field_name=name,
             name=file_name,
@@ -78,3 +92,5 @@ class ClientsideCroppingWidget(Widget):
             size=file_size,
             charset=None, # Binary file
         )
+        inmem_file.original_uploaded_data = data[name]
+        return inmem_file
