@@ -61,10 +61,10 @@ Use the `ClientsideCroppingWidget` for any `django.forms.ImageField` in a Form :
             fields = ['title', 'cover_photo']
             widgets = {
                 'cover_photo': ClientsideCroppingWidget(
-                    width: 400,
-                    height: 600,
-                    preview_width: 100,
-                    preview_height: 150,
+                    width=400,
+                    height=600,
+                    preview_width=100,
+                    preview_height=150,
                 )
             }
 
