@@ -1,0 +1,45 @@
+# Copyleft (C) 2020 Ramiro Polverini
+# This file is distributed under the same license as the django-client-side-image-cropping package.
+# FIRST AUTHOR rpolverini@gmail.com, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-19 17:50+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Ramiro Polverini\n"
+"Language-Team: Bantics\n"
+"Language: es-ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: templates/client-side_cropping_widget.html:7
+msgid "Choose image"
+msgstr "Elegir Imágen"
+
+#: templates/client-side_cropping_widget.html:8
+msgid "Choose other image"
+msgstr "Elegir otra Imágen"
+
+#: templates/client-side_cropping_widget.html:11
+msgid "Delete image"
+msgstr "Eliminar Imágen"
+
+#: templates/client-side_cropping_widget.html:16
+msgid "Rotate left"
+msgstr "Rotar Izq."
+
+#: templates/client-side_cropping_widget.html:16
+msgid "Rotate right"
+msgstr "Rotar Der."
+
+#: templates/client-side_cropping_widget.html:17
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: templates/client-side_cropping_widget.html:17
+msgid "OK"
+msgstr "OK"
