@@ -18,15 +18,15 @@ msgstr ""
 
 #: templates/client-side_cropping_widget.html:7
 msgid "Choose image"
-msgstr "Elegir Imágen"
+msgstr "Elegir Imagen"
 
 #: templates/client-side_cropping_widget.html:8
 msgid "Choose other image"
-msgstr "Elegir otra Imágen"
+msgstr "Elegir otra Imagen"
 
 #: templates/client-side_cropping_widget.html:11
 msgid "Delete image"
-msgstr "Eliminar Imágen"
+msgstr "Eliminar Imagen"
 
 #: templates/client-side_cropping_widget.html:16
 msgid "Rotate left"
