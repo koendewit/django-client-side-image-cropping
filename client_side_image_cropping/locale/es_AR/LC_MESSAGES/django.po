@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-19 17:50+0100\n"
-"PO-Revision-Date: 2020-08-01 16:54+0200\n"
+"PO-Revision-Date: 2020-08-02 19:33-0300\n"
 "Last-Translator: Ramiro Polverini\n"
 "Language-Team: Bantics\n"
 "Language: es_AR\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: templates/client-side_cropping_widget.html:7
 msgid "Choose image"
@@ -30,11 +31,11 @@ msgstr "Eliminar Imagen"
 
 #: templates/client-side_cropping_widget.html:16
 msgid "Rotate left"
-msgstr "Rotar Izq."
+msgstr "Rotar Izq"
 
 #: templates/client-side_cropping_widget.html:16
 msgid "Rotate right"
-msgstr "Rotar Der."
+msgstr "Rotar Der"
 
 #: templates/client-side_cropping_widget.html:17
 msgid "Cancel"
