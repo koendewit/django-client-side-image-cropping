@@ -16,7 +16,7 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt update
-        sudo apt install -y wget
+        sudo apt install -y wget gettext findutils
         python -m pip install --upgrade pip
         python -m pip install setuptools twine
     - name: Build and publish
@@ -26,5 +26,6 @@ jobs:
       run: |
         wget -P client_side_image_cropping/static/client_side_image_cropping https://raw.githubusercontent.com/Foliotek/Croppie/v2.5.1/croppie.css
         wget -P client_side_image_cropping/static/client_side_image_cropping https://raw.githubusercontent.com/Foliotek/Croppie/v2.5.1/croppie.min.js
+        find client_side_image_cropping/locale -name \*.po -print -execdir sh -c 'msgfmt -f -o "$(basename "$0" .po).mo" "$0"' '{}' \;
         python setup.py sdist
         twine upload dist/*
