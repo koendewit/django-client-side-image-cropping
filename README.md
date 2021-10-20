@@ -42,8 +42,8 @@ Every page containing a form using the `ClientsideCroppingWidget` should include
     {% load static %}
     
     <head>
-        <link rel="stylesheet" href="{% static "client_side_image_cropping/cropping.css" %}"></script>
-        <link rel="stylesheet" href="{% static "client_side_image_cropping/cropping_widget.css" %}"></script>
+        <link rel="stylesheet" href="{% static "client_side_image_cropping/croppie.css" %}">
+        <link rel="stylesheet" href="{% static "client_side_image_cropping/cropping_widget.css" %}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="{% static "client_side_image_cropping/croppie.min.js" %}"></script>
         <script src="{% static "client_side_image_cropping/cropping_widget.js" %}"></script>
